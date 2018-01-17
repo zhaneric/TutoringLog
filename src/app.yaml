@@ -1,0 +1,46 @@
+application: tutoring-log
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /static/css
+  static_dir: static/css
+  application_readable: true
+  
+- url: /static/js
+  static_dir: static/js
+  
+- url: /static/lib
+  static_dir: static/lib
+  
+- url: /static/img
+  static_dir: static/img
+  
+- url: /
+  script: framework.index.app
+  
+- url: /request
+  script: data.request.app
+  login: required
+  
+- url: /submit
+  script: data.submit.app
+  login: required
+  
+- url: /admin
+  script: pages.admin.app
+  login: admin
+  
+- url: /member
+  script: pages.member.app
+  login: required
+  
+- url: /student
+  script: pages.student.app
+  login: required
+  
+- url: /restricted
+  script: pages.restricted.app
+  login: required

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+	<target name="start_server">
+		<echo>Creating debug file</echo>
+		<touch file="src/static/debug" />
+		<echo>Starting...</echo>
+		<exec executable="/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/dev_appserver.py">
+			<arg value="src"/>
+		</exec>
+		<echo>Server stopped.</echo>
+	</target>
+	<target name="upload_to_google">
+		<echo>Deleting debug file if</echo>
+		<delete file="src/static/debug" />
+		<echo>Uploading...</echo>
+		<exec executable="/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/appcfg.py">
+			<arg value="-A"/>
+			<arg value="tutoring-log"/>
+			<arg value="update"/>
+			<arg value="src/"/>
+		</exec>
+		<echo>Upload complete.</echo>
+	</target>
+</project>

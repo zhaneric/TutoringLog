@@ -1,0 +1,25 @@
+<div id="data" class="basic-grey">
+	<p style="font-weight: bold;">* = required</p>
+	<br /> <label for="tutee">Your Name: *</label><input type="text" id="tutee" value="%s" required /><br /> <label for="tutor">Name of Tutor: *</label><select id="tutor" required><option id="tutors-loading" value="loading">Loading list of tutors...</option></select><br /> <label for="date">Date of Tutoring: *</label><input id="date" type="text" class="date-control" required /><br /> <label for="minutes">Time (minutes): *</label><input type="text" id="minutes" required
+		placeholder="--enter time in minutes--" /><br /> <label for="subject">Subject: *</label> <select id="subject" required>
+		<option disabled selected value="" style="display: none;">-- select a subject --</option>
+		<option value="Pre Algebra">Pre-Algebra</option>
+		<option value="Algebra">Algebra</option>
+		<option value="Geometry">Geometry</option>
+		<option value="Precalculus">Precalculus</option>
+		<option value="Calculus">Calculus</option>
+		<option value="Statistics">Statistics</option>
+		<option value="Discrete">Discrete</option>
+		<option value="Computer Science">Computer Science</option>
+	</select><br /> <label for="satisfaction">Satisfaction (optional): </label><select id="satisfaction">
+		<option disabled selected value="" style="display: none;">-- select a rating --</option>
+		<option value="1">1 &mdash; Poor</option>
+		<option value="2">2 &mdash; Unsatisfactory</option>
+		<option value="3">3 &mdash; Ok</option>
+		<option value="4">4 &mdash; Good</option>
+		<option value="5">5 &mdash; Excellent</option>
+	</select><br /> <label for="comments">Additional Comments (optional): </label><input type="text" id="comments" /><br /> <input type="button" id="submit" value="Submit" class="button" /> <img id="loader" style="display: none;" src="static/img/ajax-loader.gif" />
+</div>
+<div id="dialog" style="display: none;">
+	<p id="dialogreport">Content</p>
+</div>

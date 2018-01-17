@@ -1,0 +1,50 @@
+@page {
+    size: letter portrait;
+    @frame content_frame {
+        left: 50pt;
+        width: 512pt;
+        top: 30pt;
+        height: 692pt;
+    }
+}
+.title
+{
+    font-size: 5em;
+    font-family: "Times New Roman", Times, serif;
+}
+.break
+{
+	page-break-before: always;
+}
+#info
+{
+    font-size: 2em;
+}
+.label, #time
+{
+    font-size: 2em;
+}
+.biglabel
+{
+	font-size: 3em;
+}
+div
+{
+    text-align: center;
+}
+table
+{
+    font-size: 1.4em;
+    margin: 30px auto;
+}
+.normal
+{
+    border-bottom: 1px solid black;
+    padding-top: 3px;
+}
+.head
+{
+    font-size: 1.5em;
+    padding-bottom: -5px;
+    border-bottom: 3px solid black;
+}

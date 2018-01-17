@@ -1,0 +1,70 @@
+<div id = "menu" class="basic-grey-3">
+<table class = "wide-table">
+	<tr class = "wide-options-row" id = "menu-row">
+		<td><a class = "wide-link">Edit Club Members</a></td>
+		<td><a class = "wide-link">Edit Application Text</a></td>
+		<td><a class = "wide-link">View Graphs</a></td>
+		<td><a class = "wide-link" href = "request?summary" target="_blank">Generate Printable Overall Report</a></td>
+		<td><a class = "wide-link">Submit a Log Manually</a></td>
+	</tr>
+</table>
+</div>
+<div id="modules">
+	<div class="module basic-grey-3" id = "logs">
+		<h1>Student Logs</h1>
+		<table class = "wide-table">
+			<tr>
+				<td><span class = "block-label">Club Member:</span></td>
+				<td><select class = "person-select" id = "club-member"><option id="tutors-loading" value="loading">Loading list of tutors...</option></select></td>
+			</tr>
+			<tr class = "wide-options-row wide-options-table-row">
+				<td><a data-which = "club-member" class = "wide-link view-log">View Log</a></td>
+				<td><a data-which = "club-member" class = "wide-link printable-report">View Printable Report (PDF)</a></td>
+				<td><a data-which = "club-member" class = "wide-link download-excel">Download Excel (CSV)</a></td>
+			</tr>
+			<tr>
+				<td><span class = "block-label">Student:</span></td>
+				<td><select class = "person-select" id = "student"><option id="students-loading" value="loading">Loading list of students...</option></select></td>
+			</tr>
+			<tr class = "wide-options-row wide-options-table-row">
+				<td><a data-which = "club-member" class = "wide-link view-log">View Log</a></td>
+				<td><a data-which = "club-member" class = "wide-link printable-report">View Printable Report (PDF)</a></td>
+				<td><a data-which = "club-member" class = "wide-link download-excel">Download Excel (CSV)</a></td>
+			</tr>
+		</table>
+	</div>
+	<div class="module basic-grey-3" id = "stats">
+		<h1>Statistics</h1>
+		<!-- <p>Club Members: <span id  = "stat-members"></span></p>
+		<p>Total Time Logged: <span id  = "stat-time"></span></p>
+		<p>Sessions Logged in past <i>day</i>: <span id  = "stat-yesterday"></span></p>
+		<p>Sessions Logged in past <i>week</i>: <span id  = "stat-week"></span></p> -->
+		<table class = "wide-table" id = "stat-table">
+			<tr><td>Club members</td><td id  = "stat-members"></td></tr>
+			<tr><td>Different students tutored</td><td id  = "stat-tutees"></td></tr>
+			<tr><td>Total time logged</td><td id  = "stat-time"></td></tr>
+			<tr><td>Total sessions logged</td><td id  = "stat-sessions"></td></tr>
+			<tr><td>Sessions logged in last 24 hours</td><td id  = "stat-yesterday"></td></tr>
+			<tr><td>Sessions logged in last 7 days</td><td id  = "stat-week"></td></tr>
+			<tr><td>Members who haven't tutored in 30 days</td><td id  = "stat-none-month">&nbsp;<a class = "wide-link" id = "show-none-month">click to show list</a></td></tr>
+			<tr><td>Club member with most time tutored</td><td id  = "stat-top"></td></tr>
+		</table>
+	</div>
+</div>
+<div id="data" class="basic-grey-3">
+	<h1 id = "data-title">Information Panel</h1>
+	<div id="data-div">
+		<div class = "data-view" id = "stat-view">
+			
+		</div>
+		<div class = "data-view" id = "table-view">
+			<span>Time: </span><span id = "data-time"></span>
+			<table id = "data-table">
+				<!-- Table Populated via cacheable JSON data -->
+			</table>
+		</div>
+	</div>
+</div>
+<div id="dialog" style="display: none;">
+	<p id="dialogreport">Content</p>
+</div>

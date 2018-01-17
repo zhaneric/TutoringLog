@@ -1,0 +1,31 @@
+<div id="data" class="basic-grey-2">
+	<p style="font-weight: bold;">%s</p>
+	<br />
+	<div id="logdata">
+		<span class = "basic-text" style = "margin-right: 10px;">Filter by Student</span>
+		<select id = "tuteeselect">
+			<option value = "none">All Students</option>
+		</select>
+		<span class = "basic-text" style = "margin-left: 5px; margin-right: 10px;">Filter by Text</span>
+		<input class="search" placeholder="Enter filter text..." type = "text" />
+		<br/>
+		<div id = "info">Hours: <span id = "info-hours">0</span>. Sessions: <span id = "info-sessions">0</span>. Students: <span id = "info-students">0</span></div>
+		<table>
+			<thead>
+				<tr>
+					<td class="sort unselectable" data-sort="name" title = "Sort by student name">Student Name</td>
+					<td class="sort unselectable" data-sort="email" title = "Sort by email">Email</td>
+					<td class="sort unselectable" data-sort="date" title = "Sort by date tutored">Date Tutored</td>
+					<td class="sort unselectable" data-sort="subject" title = "Sort by subject">Subject</td>
+					<td class="sort unselectable" data-sort="minutes" title = "Sort by minutes">Minutes</td>
+				</tr>
+			</thead>
+			<tbody class="list">
+				%s
+			</tbody>
+		</table>
+	</div>
+</div>
+	<div id="dialog" style="display: none;">
+		<p id="dialogreport">Content</p>
+	</div>
